@@ -24,7 +24,6 @@
     ],
     "admin_emails": [
         "frank@company.com",
-        "alice@company.com",
-        "bob@company.com"
+        "alice@company.com"
     ]
 }
