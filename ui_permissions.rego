@@ -56,6 +56,24 @@ show_marketing_banner = false {
     user.plan == "enterprise"
 }
 
+# --- EXPERIMENTAL UI (Percentage Rollout) ---
+# Deterministic rollout based on User ID
+enable_experimental_new_ui {
+    # Get the rollout percentage from data
+    percentage := data.global_settings.new_ui_rollout_percentage
+    percentage > 0
+    
+    # Calculate deterministic score for user (0-99)
+    # Assumption: user.id is like "u123"
+    # We strip the first char "u" and convert to number
+    # In production, use crypto.md5 or sha256 and take modulo
+    user_num := to_number(substring(user.id, 1, -1))
+    score := user_num % 100
+    
+    # Enable if score is less than percentage
+    score < percentage
+}
+
 # --- HELPER RULES ---
 is_senior_management {
     user.seniority == "director"

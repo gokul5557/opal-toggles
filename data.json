@@ -1,7 +1,8 @@
 {
     "global_settings": {
         "maintenance_mode": false,
-        "beta_program_active": true
+        "beta_program_active": true,
+        "new_ui_rollout_percentage": 30
     },
     "blocked_countries": [
         "IR"
@@ -24,6 +25,7 @@
     ],
     "admin_emails": [
         "frank@company.com",
-        "alice@company.com"
+        "alice@company.com",
+        "bob@company.com"
     ]
 }
