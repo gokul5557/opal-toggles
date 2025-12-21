@@ -4,7 +4,6 @@
         "beta_program_active": true
     },
     "blocked_countries": [
-        "NK",
         "IR"
     ],
     "department_settings": {
@@ -20,10 +19,12 @@
     },
     "beta_features_enabled_for_regions": [
         "US",
-        "CA"
+        "CA",
+        "IN"
     ],
     "admin_emails": [
         "frank@company.com",
-        "alice@company.com"
+        "alice@company.com",
+        "bob@company.com"
     ]
 }
