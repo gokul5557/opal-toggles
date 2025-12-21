@@ -1,0 +1,11 @@
+{
+    "global_settings": {
+        "maintenance_mode": false,
+        "beta_program_active": true
+    },
+    "beta_user_emails": [
+        "eve@beta.com",
+        "alice@company.com", 
+        "heidi@tech.com"
+    ]
+}

@@ -43,9 +43,16 @@ allow_invites { user.plan == "premium" }
 
 # --- Attribute Based Logic ---
 
-# Beta Testers (by flag or email)
+# Beta Testers (using data.json)
+allow_beta_features {
+    # Check if global beta program is active from data.json
+    data.global_settings.beta_program_active == true
+    # Check if user email is in the list from data.json
+    user.email == data.beta_user_emails[_]
+}
+
+# Also allow if explicitly set on user object
 allow_beta_features { user.is_beta_tester == true }
-allow_beta_features { endswith(user.email, "@beta.com") }
 
 # Onboarding hidden for old users
 show_onboarding = false {
