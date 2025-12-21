@@ -3,9 +3,27 @@
         "maintenance_mode": false,
         "beta_program_active": true
     },
-    "beta_user_emails": [
-        "eve@beta.com",
-        "alice@company.com", 
-        "heidi@tech.com"
+    "blocked_countries": [
+        "NK",
+        "IR"
+    ],
+    "department_settings": {
+        "HR": {
+            "can_view_salary": true
+        },
+        "Engineering": {
+            "can_view_salary": false
+        },
+        "Sales": {
+            "can_view_salary": false
+        }
+    },
+    "beta_features_enabled_for_regions": [
+        "US",
+        "CA"
+    ],
+    "admin_emails": [
+        "frank@company.com",
+        "alice@company.com"
     ]
 }
