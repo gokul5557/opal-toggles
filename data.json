@@ -1,4 +1,30 @@
 {
+    "users": {
+        "alice_msp": "msp_admin",
+        "bob_msp": "msp_admin",
+        "carol_org": "org_admin",
+        "dave_org": "org_admin",
+        "eve_admin": "admin",
+        "frank_admin": "admin",
+        "grace_support": "support_admin",
+        "heidi_support": "support_admin",
+        "ivan_directory": "directory_admin",
+        "judy_directory": "directory_admin",
+        "mallory_migration": "migration_admin",
+        "nester_migration": "migration_admin",
+        "oscar_domain": "domain_admin",
+        "peggy_domain": "domain_admin",
+        "quentin_email": "email_admin",
+        "rupert_email": "email_admin",
+        "sybil_billing": "billing_admin",
+        "trent_billing": "billing_admin",
+        "victor_resource": "resource_admin",
+        "walter_resource": "resource_admin",
+        "zoe_read": "read_only",
+        "yves_read": "read_only",
+        "xavier_emp": "employee",
+        "wendy_emp": "employee"
+    },
     "role_permissions": {
         "msp_admin": {
             "org_administrators": "edit",

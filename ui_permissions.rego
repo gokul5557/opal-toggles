@@ -12,7 +12,8 @@ default allow = false
 
 # Helper: Get user's permission level for a resource
 permission_level = level if {
-    role := input.user.role
+    username := input.user.username
+    role := data.users[username]
     resource := input.resource
     level := data.role_permissions[role][resource]
 }
@@ -36,7 +37,8 @@ can_view if { permission_level == "read_only" }
 
 # Return all permissions for the UI
 ui_permissions[resource] = level if {
-    role := input.user.role
+    username := input.user.username
+    role := data.users[username]
     resource_map := data.role_permissions[role]
     level := resource_map[resource]
 }
