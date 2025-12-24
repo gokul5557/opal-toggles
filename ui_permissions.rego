@@ -1,5 +1,7 @@
 package app.rbac
 
+import future.keywords.if
+
 default allow = false
 
 # Levels: "edit", "read_only", "no_access"
